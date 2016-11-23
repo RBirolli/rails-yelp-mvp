@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     puts ">>>>>>>>>>>>>>>>>>>   create   <<<<<<<<<<<<<<<<<<<<<<<<<"
     @review = @restaurant.reviews.build(review_params)
     @review.save
-    redirect_to :restaurants_controller => 'get', :action => 'show'
+    redirect_to restaurant_path(@restaurant)
   end
 
   private
